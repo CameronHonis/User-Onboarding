@@ -20,9 +20,10 @@ const Form = props => {
 
     const TrimData = data => {
         return {
-            name: data.name,
-            email: data.email,
+            name: data.name.trim(),
+            email: data.email.trim(),
             password: data.password,
+            role: data.role,
         }
     }
 
@@ -82,6 +83,15 @@ const Form = props => {
                 ></input>
             </label>
             <label>
+                Role:
+                <select className='textbox' name='role' onChange={FormChange}>
+                    <option selected disabled>Select a Role</option>
+                    <option value='instructor'>Instructor</option>
+                    <option value='teamLead'>Team Lead</option>
+                    <option value='student'>Student</option>
+                </select>
+            </label>
+            <label>
                 Terms:
                 <input
                     name='tos'
@@ -96,6 +106,7 @@ const Form = props => {
                 <p>{formErrors.name}</p>
                 <p>{formErrors.email}</p>
                 <p>{formErrors.password}</p>
+                <p>{formErrors.role}</p>
                 <p>{formErrors.tos}</p>
             </div>
         </form>

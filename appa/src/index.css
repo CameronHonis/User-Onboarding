@@ -30,7 +30,8 @@ form .inputs{
   display: flex;
   justify-content: space-around;
   margin-bottom: 2%;
-  width: 80%;
+  width: 95%;
+  max-width: 1250px;
 }
 
 form .inputs .textbox{
@@ -64,16 +65,16 @@ form button{
   border-right: 3px solid rgb(25,50,80);
   background: rgb(50,60,80);
   color: white;
-  width: 8%;
+  width: 120px;
   font-size: 1.4rem;
   font-weight: 600;
 }
 form button:disabled{
-  border-top: 3px solid rgb(140,170,255);
-  border-left: 3px solid rgb(140,170,255);
-  border-bottom: 3px solid rgb(50,100,160);
-  border-right: 3px solid rgb(50,100,160);
-  background: rgb(100,120,160);
+  border-top: 3px solid rgb(200,200,200);
+  border-left: 3px solid rgb(200,200,200);
+  border-bottom: 3px solid rgb(100,100,100);
+  border-right: 3px solid rgb(100,100,100);
+  background: rgb(150,150,150);
   color: rgb(50,60,80);
 }
 

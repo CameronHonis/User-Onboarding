@@ -15,6 +15,9 @@ const Schema = yup.object().shape({
     .required('Password is required'),
   tos: yup
     .boolean()
-    .oneOf([true],'Must accept terms and conditions')
+    .oneOf([true],'Must accept terms and conditions'),
+  role: yup
+    .string()
+    .required('Role is required')
 })
 export default Schema

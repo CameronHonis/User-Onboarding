@@ -21,9 +21,11 @@ function App() {
   return (
     <div className="App">
       <Form users={users} setUsers={setUsers}/>
-      {users.map(v => (<UserItem 
+      {users.map(v => (<UserItem
+        key={v.id}
         name={v.name || v.first_name}
         email={v.email}
+        role={v.role}
       />))}
     </div>
   );
